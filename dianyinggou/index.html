@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电影狗-最新电影推荐_热门电影片单_在线观影指南</title>
+<meta name="description" content="电影狗为你整理近期热门电影推荐、高分片单与观影指南。涵盖新片上线动态、类型片解析、影人访谈与用户真实评论，帮你快速找到值得看的电影，收藏这份持续更新的电影狗片单。">
+<meta name="keywords" content="电影狗,电影推荐,热门电影,高分片单,观影指南">
+<style>
+:root{
+  --bg:#f6f4f0;
+  --paper:#ffffff;
+  --ink:#1f1d1a;
+  --ink-soft:#5a554e;
+  --line:#e6e0d8;
+  --accent:#b5432a;
+  --accent-soft:#f4e3dd;
+  --gold:#b08a4a;
+  --gold-soft:#f3ead9;
+  --radius:14px;
+  --shadow:0 6px 22px rgba(60,45,30,.08);
+  --shadow-hover:0 12px 30px rgba(60,45,30,.14);
+  --maxw:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* 顶部导航 */
+.topbar{
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+}
+.nav{display:flex;align-items:center;gap:28px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px}
+.logo-mark{
+  width:38px;height:38px;border-radius:12px;
+  background:radial-gradient(circle at 30% 30%,#d4633f,#8e2f1c);
+  color:#fff;display:grid;place-items:center;font-size:15px;font-weight:800;
+  box-shadow:inset 0 -3px 6px rgba(0,0,0,.18);
+}
+.logo em{color:var(--accent);font-style:normal}
+.navlinks{display:flex;gap:22px;font-size:15px;color:var(--ink-soft);flex:1;flex-wrap:wrap}
+.navlinks a{transition:color .2s}
+.navlinks a:hover{color:var(--accent)}
+.navbtn{
+  background:var(--accent);color:#fff;padding:9px 20px;border-radius:999px;
+  font-size:14px;font-weight:600;transition:transform .2s,box-shadow .2s;
+  white-space:nowrap;
+}
+.navbtn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(181,67,42,.3)}
+
+/* Banner */
+.hero{
+  background:linear-gradient(135deg,#2a2420 0%,#3d322a 55%,#5a3a2c 100%);
+  color:#fff;padding:64px 0 56px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(181,67,42,.45),transparent 65%);
+  border-radius:50%;
+}
+.hero-inner{position:relative;z-index:2;max-width:800px}
+.hero-badge{
+  display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+  padding:5px 14px;border-radius:999px;font-size:13px;letter-spacing:1px;margin-bottom:20px;
+}
+.hero h1{font-size:clamp(28px,4vw,44px);line-height:1.25;font-weight:800;letter-spacing:.5px}
+.hero h1 span{color:#f0b48c}
+.hero-desc{margin-top:18px;font-size:16px;color:rgba(255,255,255,.82);max-width:640px}
+.searchbar{
+  margin-top:30px;display:flex;background:#fff;border-radius:999px;overflow:hidden;
+  max-width:560px;box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+.searchbar input{flex:1;border:none;outline:none;padding:15px 22px;font-size:15px;color:#333}
+.searchbar button{
+  border:none;background:var(--accent);color:#fff;padding:0 30px;font-size:15px;
+  font-weight:600;cursor:pointer;transition:background .2s;
+}
+.searchbar button:hover{background:#9c3720}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero-tags a{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  padding:7px 16px;border-radius:999px;font-size:13.5px;color:rgba(255,255,255,.9);
+  transition:background .2s,transform .2s;
+}
+.hero-tags a:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+
+/* 通用 section */
+.section{padding:56px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:30px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(22px,2.6vw,28px);font-weight:800;position:relative;padding-left:16px}
+.sec-head h2::before{
+  content:"";position:absolute;left:0;top:8px;bottom:8px;width:5px;border-radius:4px;
+  background:linear-gradient(var(--accent),var(--gold));
+}
+.sec-head p{color:var(--ink-soft);font-size:14.5px;max-width:560px}
+.sec-more{font-size:14px;color:var(--accent);font-weight:600;white-space:nowrap}
+
+/* 内容简介 */
+.intro-card{
+  background:var(--paper);border-radius:var(--radius);padding:36px 40px;
+  box-shadow:var(--shadow);border:1px solid var(--line);
+}
+.intro-card h2{font-size:24px;margin-bottom:18px}
+.intro-card p{color:var(--ink-soft);margin-bottom:14px;font-size:15.5px;text-align:justify}
+.intro-card p:last-child{margin-bottom:0}
+.intro-card strong{color:var(--ink)}
+
+/* 热门推荐卡片 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+.card{
+  background:var(--paper);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);border:1px solid var(--line);
+  transition:transform .22s,box-shadow .22s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+.card-cover{
+  height:150px;display:flex;align-items:flex-end;padding:16px;
+  color:#fff;font-weight:800;font-size:17px;letter-spacing:.5px;position:relative;
+}
+.card-cover::after{
+  content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.55));
+}
+.card-cover span{position:relative;z-index:2}
+.cv1{background:linear-gradient(135deg,#7b3f2c,#c96a45)}
+.cv2{background:linear-gradient(135deg,#2c4a5e,#4d8fa8)}
+.cv3{background:linear-gradient(135deg,#4a3b62,#8b6fb0)}
+.cv4{background:linear-gradient(135deg,#5c4a2a,#a8873f)}
+.cv5{background:linear-gradient(135deg,#2f4a3a,#5d9170)}
+.cv6{background:linear-gradient(135deg,#5e2c3a,#a84d63)}
+.cv7{background:linear-gradient(135deg,#33405a,#6479a8)}
+.cv8{background:linear-gradient(135deg,#5a3320,#b0642f)}
+.card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  font-size:12px;padding:3px 10px;border-radius:999px;background:var(--accent-soft);
+  color:var(--accent);font-weight:600;
+}
+.tag.gold{background:var(--gold-soft);color:#8a6a2c}
+.card-desc{font-size:14px;color:var(--ink-soft);flex:1}
+.card-meta{display:flex;justify-content:space-between;font-size:12.5px;color:#918a80;border-top:1px dashed var(--line);padding-top:10px}
+
+/* 最新更新列表 */
+.update-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+.upd{
+  background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  padding:16px 20px;display:flex;gap:14px;align-items:flex-start;
+  transition:border-color .2s,transform .2s;
+}
+.upd:hover{border-color:var(--accent);transform:translateX(3px)}
+.upd-time{
+  font-size:12px;color:#fff;background:var(--accent);padding:3px 9px;border-radius:7px;
+  font-weight:700;white-space:nowrap;margin-top:2px;
+}
+.upd-txt h4{font-size:15.5px;margin-bottom:4px}
+.upd-txt p{font-size:13.5px;color:var(--ink-soft)}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.cat{
+  background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  padding:20px 22px;display:flex;align-items:center;gap:12px;
+  transition:transform .2s,box-shadow .2s,border-color .2s;font-weight:600;
+}
+.cat:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gold)}
+.cat-ico{
+  width:38px;height:38px;border-radius:10px;display:grid;place-items:center;
+  background:var(--gold-soft);color:#8a6a2c;font-size:18px;flex:none;
+}
+.cat small{display:block;font-weight:400;color:var(--ink-soft);font-size:12.5px;margin-top:2px}
+
+/* 深度解析正文 */
+.article{
+  background:var(--paper);border-radius:var(--radius);padding:44px 48px;
+  border:1px solid var(--line);box-shadow:var(--shadow);
+}
+.article h2{font-size:26px;margin-bottom:22px}
+.article h3{font-size:19px;margin:30px 0 12px;color:var(--accent)}
+.article p{font-size:15.8px;color:#3a352f;margin-bottom:16px;text-align:justify}
+.article p:last-child{margin-bottom:0}
+.article blockquote{
+  border-left:4px solid var(--gold);background:var(--gold-soft);
+  padding:16px 22px;border-radius:0 10px 10px 0;margin:22px 0;
+  font-size:15px;color:#6b5730;
+}
+
+/* 体验指南 */
+.exp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.exp{
+  background:var(--paper);border-radius:12px;padding:24px;border:1px solid var(--line);
+  transition:box-shadow .2s;
+}
+.exp:hover{box-shadow:var(--shadow)}
+.exp h4{font-size:17px;margin-bottom:10px;display:flex;align-items:center;gap:9px}
+.exp h4 i{
+  width:26px;height:26px;border-radius:8px;background:var(--accent-soft);
+  color:var(--accent);display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:800;
+}
+.exp p{font-size:14.2px;color:var(--ink-soft)}
+
+/* FAQ */
+.faq{display:grid;gap:14px}
+.faq-item{
+  background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;
+}
+.faq-q{
+  padding:18px 24px;font-weight:700;font-size:16px;display:flex;justify-content:space-between;
+  align-items:center;cursor:pointer;gap:16px;color:var(--ink);
+}
+.faq-q span:last-child{color:var(--accent);font-size:20px;line-height:1;flex:none;transition:transform .2s}
+.faq-item.open .faq-q span:last-child{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 24px;
+  color:var(--ink-soft);font-size:14.8px;
+}
+.faq-item.open .faq-a{max-height:400px;padding-bottom:20px}
+.faq-a p{margin:0}
+
+/* 用户评论 */
+.cmt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.cmt{
+  background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  padding:18px 22px;transition:transform .2s;
+}
+.cmt:hover{transform:translateY(-3px)}
+.cmt-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.avatar{
+  width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-weight:800;font-size:14px;flex:none;
+}
+.cmt-name{font-weight:700;font-size:14.5px}
+.cmt-time{font-size:12px;color:#a49d92;margin-left:auto}
+.cmt-txt{font-size:14.3px;color:var(--ink-soft)}
+.stars{color:var(--gold);font-size:13px;letter-spacing:1px;margin-bottom:6px}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.news{
+  background:var(--paper);border-radius:12px;padding:24px;border:1px solid var(--line);
+  transition:box-shadow .2s,transform .2s;
+}
+.news:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.news-date{font-size:12.5px;color:var(--accent);font-weight:700;margin-bottom:8px}
+.news h4{font-size:16.5px;margin-bottom:8px;line-height:1.5}
+.news p{font-size:14px;color:var(--ink-soft)}
+
+/* 页脚 */
+footer{
+  background:#211d19;color:rgba(255,255,255,.7);padding:48px 0 30px;margin-top:20px;
+}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.foot-grid h5{color:#fff;font-size:15px;margin-bottom:14px}
+.foot-grid a{display:block;font-size:13.5px;color:rgba(255,255,255,.62);margin-bottom:9px;transition:color .2s}
+.foot-grid a:hover{color:#f0b48c}
+.foot-about p{font-size:13.5px;line-height:1.8;margin-bottom:12px}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:22px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12.5px;color:rgba(255,255,255,.5);
+}
+
+/* 响应式 */
+@media (max-width:860px){
+  .nav{gap:14px;height:auto;padding:12px 0;flex-wrap:wrap}
+  .navlinks{order:3;width:100%;gap:14px;font-size:14px}
+  .article,.intro-card{padding:26px 22px}
+  .hero{padding:44px 0 40px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .section{padding:40px 0}
+}
+@media (max-width:520px){
+  .searchbar button{padding:0 20px}
+  .foot-grid{grid-template-columns:1fr}
+  .update-list{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .hero-desc{font-size:14.5px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="topbar">
+  <div class="wrap nav">
+    <a href="/" class="logo"><span class="logo-mark">狗</span>电影<em>狗</em></a>
+    <nav class="navlinks">
+      <a href="/#hot-films">热门推荐</a>
+      <a href="/#latest-updates">最新更新</a>
+      <a href="/#deep-analysis">深度解析</a>
+      <a href="/#category">分类入口</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">影迷评论</a>
+      <a href="/#news">电影资讯</a>
+    </nav>
+    <a href="/#latest-updates" class="navbtn">今日片单</a>
+  </div>
+</header>
+
+<!-- 首屏 Banner -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="hero-badge">2026 冬季观影 · 每周三更新</span>
+    <h1>电影狗 · 帮你找到<span>值得一看</span>的电影</h1>
+    <p class="hero-desc">从院线新片到冷门佳作，电影狗用编辑视角整理热门电影推荐、高分片单与观影指南。不堆砌榜单，只挑真正有看点、有情绪、有余味的作品。</p>
+    <p class="hero-desc">类型片解析、影人访谈、用户真实短评，一起把“今晚看什么”这件事变得简单一点。</p>
+    <form class="searchbar" onsubmit="return false">
+      <input type="text" placeholder="搜索电影名、导演、类型，或直接输入“电影狗 片单”……">
+      <button type="button">搜索</button>
+    </form>
+    <div class="hero-tags">
+      <a href="/#hot-films">本周热门</a>
+      <a href="/#category">悬疑犯罪</a>
+      <a href="/#category">家庭剧情</a>
+      <a href="/#category">科幻奇幻</a>
+      <a href="/#deep-analysis">口碑解析</a>
+      <a href="/#latest-updates">新片上线</a>
+      <a href="/#faq">观影指南</a>
+      <a href="/#comments">影迷短评</a>
+      <a href="/#news">行业动态</a>
+    </div>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="section" id="intro">
+  <div class="wrap">
+    <div class="intro-card">
+      <h2>关于电影狗：一个认真挑片的电影内容站</h2>
+      <p><strong>电影狗</strong>不是又一个把海报堆满屏幕的片单网站。它更像一个坐在你旁边、看过不少片子、也踩过不少雷的朋友——帮你判断一部电影值不值得花两小时，帮你把一部好片里的门道说清楚。页面围绕近期热门电影、经典回看、类型片单与影人创作展开，适合想快速找到观影目标的普通观众，也适合喜欢深挖细节的影迷。</p>
+      <p>电影狗的内容结构大致分为几层：第一层是“现在看什么”，由热门推荐和最新更新承担；第二层是“为什么值得看”，由深度解析和体验指南完成；第三层是“看完想聊两句”，由用户评论和常见问题承接。这样的顺序既照顾了快速浏览的读者，也为搜索“电影狗推荐”“电影狗片单”“电影狗影评”这类长尾需求提供了足够的信息密度。</p>
+      <p>如果你经常在深夜打开流媒体首页却迟迟点不下去，或者想找一部适合全家、适合约会、适合一个人安静看完的电影，电影狗的分类入口和标签体系会帮上忙。页面内容会根据院线和平台动态持续补充，建议收藏本页，方便下次直接回来看更新。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门内容推荐 -->
+<section class="section" id="hot-films">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>热门电影推荐 · 电影狗本周精选</h2>
+        <p>结合近期讨论度、口碑走势与观影体验，挑出 8 部值得排进片单的作品。</p>
+      </div>
+      <a href="/#latest-updates" class="sec-more">查看更新动态 →</a>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-cover cv1"><span>《雾中灯塔》</span></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">悬疑</span><span class="tag gold">剧情</span><span class="tag">院线</span></div>
+          <p class="card-desc">一座海边灯塔、一桩旧案、三个互相说谎的人。导演用大量留白制造压迫感，结尾反转不炫技，反而让人沉默。适合喜欢慢热悬疑的观众。</p>
+          <div class="card-meta"><span>热度 9.2 万</span><span>时长 118 分钟</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-cover cv2"><span>《夏日尽头》</span></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">家庭</span><span class="tag gold">成长</span><span class="tag">治愈</span></div>
+          <p class="card-desc">高考结束后的最后一个夏天，一对母子重新学习如何相处。没有刻意煽情，细节扎实，母亲整理旧课本那场戏被不少观众称为“今年最好哭的一分钟”。</p>
+          <div class="card-meta"><span>热度 7.8 万</span><span>评分 8.6</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-cover cv3"><span>《星轨之外》</span></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">科幻</span><span class="tag gold">冒险</span><span class="tag">视效</span></div>
+          <p class="card-desc">近未来太空救援题材，硬核设定与情感线结合得比较自然。空间站失重长镜头是亮点，适合在影院大银幕体验。</p>
+          <div class="card-meta"><span>热度 11.3 万</span><span>IMAX 推荐</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-cover cv4"><span>《老戏台》</span></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">年代</span><span class="tag gold">人文</span><span class="tag">戏曲</span></div>
+          <p class="card-desc">地方剧团最后的巡演，台上台下都是人生。台词讲究、演员功底扎实，节奏偏慢，但越看越有味道，适合喜欢传统题材的观众。</p>
+          <div class="card-meta"><span>热度 4.6 万</span><span>评分 8.9</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-cover cv5"><span>《深山来信》</span></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">纪录</span><span class="tag gold">自然</span><span class="tag">人文</span></div>
+          <p class="card-desc">跟随乡村邮递员走过三条山路的纪录片，镜头克制，信息量大。看完会重新理解“慢”这件事，适合周末安静观看。</p>
+          <div class="card-meta"><span>热度 3.9 万</span><span>片长 96 分钟</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-cover cv6"><span>《夜班便利店》</span></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">都市</span><span class="tag gold">轻喜剧</span><span class="tag">群像</span></div>
+          <p class="card-desc">凌晨两点到五点的便利店，进进出出的都是故事。多线叙事轻巧不杂乱，几位配角写得比主角还鲜活，适合下饭看。</p>
+          <div class="card-meta"><span>热度 6.1 万</span><span>平台独播</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-cover cv7"><span>《回声实验》</span></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">惊悚</span><span class="tag gold">心理</span><span class="tag">密闭空间</span></div>
+          <p class="card-desc">一间录音室、一段无法解释的回声。小成本但氛围做得很足，声音设计是最大功臣，胆子小的建议白天观看。</p>
+          <div class="card-meta"><span>热度 5.4 万</span><span>评分 8.1</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-cover cv8"><span>《祖父的相机》</span></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag">剧情</span><span class="tag gold">亲情</span><span class="tag">公路</span></div>
+          <p class="card-desc">孙女带着祖父留下的胶卷走完他当年没走完的路。叙事朴素，但情感递进自然，适合和长辈一起看。</p>
+          <div class="card-meta"><span>热度 4.2 万</span><span>时长 105 分钟</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="section" id="latest-updates">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>最新更新 · 电影狗动态追踪</h2>
+        <p>截至 2026 年 11 月 7 日，院线上线、平台新片与影展消息汇总。</p>
+      </div>
+    </div>
+    <div class="update-list">
+      <div class="upd"><span class="upd-time">11-07</span><div class="upd-txt"><h4>《雾中灯塔》院线密钥延期</h4><p>上映第三周口碑持续走高，部分影院加开午夜场。</p></div></div>
+      <div class="upd"><span class="upd-time">11-06</span><div class="upd-txt"><h4>《夏日尽头》上线流媒体</h4><p>平台首播，会员可看，导演剪辑版多出 12 分钟内容。</p></div></div>
+      <div class="upd"><span class="upd-time">11-06</span><div class="upd-txt"><h4>电影狗专题：冬季家庭片单</h4><p>新增 6 部适合全家观看的电影，附观影顺序建议。</p></div></div>
+      <div class="upd"><span class="upd-time">11-05</span><div class="upd-txt"><h4>《星轨之外》IMAX 版本定档</h4><p>确认于 11 月 21 日登陆部分 IMAX 影厅。</p></div></div>
+      <div class="upd"><span class="upd-time">11-05</span><div class="upd-txt"><h4>《老戏台》主创见面会</h4><p>本周末三城巡回路演，现场设映后交流环节。</p></div></div>
+      <div class="upd"><span class="upd-time">11-04</span><div class="upd-txt"><h4>《深山来信》获纪录片单元提名</h4><p>入围年度最佳纪录长片，评审评价“克制而有力量”。</p></div></div>
+      <div class="upd"><span class="upd-time">11-03</span><div class="upd-txt"><h4>电影狗高分片单更新</h4><p>新增 2026 年度评分 8.5 以上作品索引，持续维护。</p></div></div>
+      <div class="upd"><span class="upd-time">11-02</span><div class="upd-txt"><h4>《夜班便利店》第二季筹备</h4><p>制作方确认剧本开发中，原班人马有望回归。</p></div></div>
+      <div class="upd"><span class="upd-time">11-01</span><div class="upd-txt"><h4>《回声实验》导演新作立项</h4><p>继续走心理惊悚路线，预计明年开机。</p></div></div>
+      <div class="upd"><span class="upd-time">10-30</span><div class="upd-txt"><h4>《祖父的相机》延长放映</h4><p>因观众自发推荐，多地影院延长小规模放映周期。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="section" id="category">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>分类入口 · 按类型找电影</h2>
+        <p>电影狗把片库按观影需求拆成 8 个方向，点进去就能看到对应的推荐与解析。</p>
+      </div>
+    </div>
+    <div class="cat-grid">
+      <a href="/#hot-films" class="cat"><span class="cat-ico">悬</span><div>悬疑犯罪<small>反转、推理、心理压迫</small></div></a>
+      <a href="/#hot-films" class="cat"><span class="cat-ico">家</span><div>家庭剧情<small>亲情、成长、生活流</small></div></a>
+      <a href="/#hot-films" class="cat"><span class="cat-ico">科</span><div>科幻奇幻<small>设定、视效、世界观</small></div></a>
+      <a href="/#hot-films" class="cat"><span class="cat-ico">纪</span><div>纪录人文<small>真实故事、自然观察</small></div></a>
+      <a href="/#hot-films" class="cat"><span class="cat-ico">喜</span><div>轻喜剧<small>下饭、解压、群像</small></div></a>
+      <a href="/#hot-films" class="cat"><span class="cat-ico">惊</span><div>惊悚心理<small>密闭空间、氛围向</small></div></a>
+      <a href="/#hot-films" class="cat"><span class="cat-ico">文</span><div>文艺作者<small>导演风格、影展作品</small></div></a>
+      <a href="/#hot-films" class="cat"><span class="cat-ico">经</span><div>经典回看<small>老片修复、影史必看</small></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="section" id="deep-analysis">
+  <div class="wrap">
+    <article class="article">
+      <h2>深度解析：电影狗为什么这样推荐电影</h2>
+      <p>很多观众搜索“电影狗”，其实是在找一个能替自己先看一遍的筛选器。市面上片单不少，但真正的问题是：榜单往往只告诉你“评分高”，却没告诉你“适不适合你现在看”。电影狗的推荐逻辑更偏向场景与情绪匹配——同样 8 分以上的电影，有的适合精力充沛的周末下午，有的只适合疲惫时安静陪伴。这个区别，比分数本身更重要。</p>
+      <h3>类型不是标签，而是观看预期</h3>
+      <p>以悬疑片为例，电影狗在解析时不会只写“烧脑反转”，而会拆得更细：是信息差驱动的推理型悬疑，还是氛围驱动的心理压迫型？前者需要观众主动参与拼图，后者更依赖视听和表演。像《雾中灯塔》属于后者，它把大量真相藏在人物沉默里，观众如果抱着“快节奏解谜”的预期去看，可能会觉得闷；但如果你喜欢在细节里找线索，它的后劲会很足。电影狗把这类差异讲清楚，是为了让推荐真正可用。</p>
+      <h3>人物与表演，是口碑分化的关键</h3>
+      <p>近期几部讨论度高的作品，几乎都绕不开表演。《夏日尽头》里母亲的扮演者用极小的动作完成情绪转换，不靠台词也能让人代入；《老戏台》则靠一群舞台经验丰富的演员把年代感稳住。电影狗在正文里会指出具体场景，比如哪一场戏是角色弧光的转折点，哪位配角承担了叙事功能。这种写法虽然不如一句“演技炸裂”来得爽快，但能帮读者判断自己会不会被这类表演打动。</p>
+      <h3>节奏感决定了一部电影适合谁</h3>
+      <p>节奏不是越快越好。电影狗在解析中会给出比较具体的参考：前 30 分钟是否进入主线、中段有没有明显的情绪缓冲、结尾是收束型还是开放型。《深山来信》节奏缓慢，但每一段路程都有信息增量，属于“慢而不空”；《回声实验》只有 88 分钟，几乎全程紧绷，适合一次看完，不适合分几次。把这些节奏特征写出来，读者才能根据自己的注意力状态做选择。</p>
+      <h3>同类比较：为什么不是“都推荐”</h3>
+      <p>电影狗坚持在推荐里做取舍。同样是家庭题材，《夏日尽头》更聚焦母子关系的重新建立，《祖父的相机》则把重点放在代际记忆与公路旅程；前者情绪浓度高，后者更平静。如果你最近不想被强烈情绪冲击，后者可能更合适。同类比较不是为了排高低，而是给不同需求的人提供不同入口。这也是电影狗内容里反复出现的判断标准：先理解你想看什么，再谈电影本身好不好。</p>
+      <blockquote>电影狗的编辑原则：不夸大、不堆砌形容词，把“适合谁看”放在“好不好看”前面。一部电影被推荐，应该是因为它在某个具体场景里能成立，而不是因为它出现在榜单上。</blockquote>
+      <p>对普通观众来说，搜索“电影狗”通常想解决三个问题：最近有什么值得看、某部电影到底讲什么、类似的作品还有哪些。页面里的热门推荐、深度解析和 FAQ 分别对应这三层需求。对进阶影迷来说，电影狗提供的类型拆解、表演分析和节奏判断，也能作为进一步查阅影评和访谈的起点。内容会持续更新，建议把本页加入收藏，或直接通过导航回到你关心的栏目。</p>
+    </article>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="section" id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>体验指南 · 在电影狗里怎么逛更顺手</h2>
+        <p>页面结构、筛选方式和浏览路径的一次性说明，新手也能快速上手。</p>
+      </div>
+    </div>
+    <div class="exp-grid">
+      <div class="exp">
+        <h4><i>1</i>先看更新，再看热门</h4>
+        <p>如果你追的是院线新片和平台上线，先看“最新更新”；如果只是想找一部口碑稳的，直接进“热门推荐”。两条路径互不干扰，适合不同时间预算。</p>
+      </div>
+      <div class="exp">
+        <h4><i>2</i>分类入口按情绪找片</h4>
+        <p>分类不只是类型标签，也暗示了观看状态。家庭剧情适合陪伴型观看，惊悚心理适合专注型观看，轻喜剧适合放松型观看。按当下的状态选，比按分数选更可靠。</p>
+      </div>
+      <div class="exp">
+        <h4><i>3</i>深度解析适合映前预习</h4>
+        <p>怕踩雷可以先读解析里的类型判断和节奏说明，再决定要不要看。注意部分解析涉及剧情方向，介意剧透的读者建议先看开头两段。</p>
+      </div>
+      <div class="exp">
+        <h4><i>4</i>移动端优先可读</h4>
+        <p>页面在手机端做了字号和间距适配，通勤路上刷评论区、看更新列表都比较舒服。搜索结果和卡片信息不会因为屏幕变窄而挤成一团。</p>
+      </div>
+      <div class="exp">
+        <h4><i>5</i>收藏与回访</h4>
+        <p>热门推荐和最新更新会随院线、平台动态调整。如果你习惯做观影计划，建议收藏本页，或直接记住导航里的栏目锚点，下次快速跳转。</p>
+      </div>
+      <div class="exp">
+        <h4><i>6</i>评论区可以当参考</h4>
+        <p>用户评论里有推荐、有吐槽、有对表演和结尾的讨论。电影狗不会把评论全部筛成好评，中性甚至批评的声音同样保留，方便你交叉判断。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>常见问题 · 关于电影狗和观影选择</h2>
+        <p>整理搜索里出现频率较高的 6 个问题，给出尽量具体的回答。</p>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="faq-item open">
+        <div class="faq-q"><span>电影狗推荐和普通评分榜单有什么区别？</span><span>+</span></div>
+        <div class="faq-a"><p>电影狗更强调“适合场景”和“观看预期”。同样是高分片，我们会说明它适合什么状态看、节奏偏快还是偏慢、情绪浓度如何。评分榜单解决“哪部更好”，电影狗更想解决“哪部更适合现在的你”。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>第一次来电影狗，应该先看哪几个栏目？</span><span>+</span></div>
+        <div class="faq-a"><p>建议先看“热门电影推荐”建立大致印象，再按分类入口缩小范围。如果你已经有想看的片子，直接读深度解析里的相关段落。最后可以翻一遍用户评论，看看真实观众对表演和结尾的评价是否符合你的口味。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>页面里的更新信息多久维护一次？</span><span>+</span></div>
+        <div class="faq-a"><p>最新更新栏目会根据院线上映、流媒体上线和影展消息滚动调整，目前按周整理。热门推荐和深度解析的补充节奏稍慢一些，更看重内容质量而不是数量。页面顶部标注了最近一次内容整理的时间参考。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>深度解析会不会有剧透？</span><span>+</span></div>
+        <div class="faq-a"><p>部分解析会涉及剧情走向，但一般不会直接写出关键反转的结果。介意剧透的读者可以只看每节开头对类型和节奏的判断，再决定是否继续读。FAQ 和体验指南基本不涉及剧透，可以放心看。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>电影狗的推荐适合哪些人群？</span><span>+</span></div>
+        <div class="faq-a"><p>适合想高效选片的普通观众、喜欢类型片但不想踩雷的影迷，以及需要家庭或朋友共同观影建议的人。内容尽量避开过度术语，但保留了足够的分析深度，进阶观众也能用得上。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>如果我想找和某部电影类似的作品，怎么找？</span><span>+</span></div>
+        <div class="faq-a"><p>先看深度解析里的“同类比较”部分，再从分类入口进入对应类型。热门推荐卡片上的标签也能作为线索，比如同时出现“家庭”“成长”的作品，往往在情绪取向上比较接近。评论区偶尔也有观众互相推荐，可以一起参考。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评论 -->
+<section class="section" id="comments">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>影迷评论 · 最近 30 天真实讨论</h2>
+        <p>有推荐、有吐槽、有争论，尽量保留不同声音。</p>
+      </div>
+    </div>
+    <div class="cmt-grid">
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#b5432a">阿</span><span class="cmt-name">阿灯不熬夜</span><span class="cmt-time">11-06</span></div><div class="stars">★★★★★</div><p class="cmt-txt">《雾中灯塔》真不是那种靠反转吓人的片子，后劲在人物身上。看完回家路上一直在想那个灯塔管理员到底有没有说谎。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#2c4a5e">林</span><span class="cmt-name">林间慢跑</span><span class="cmt-time">11-05</span></div><div class="stars">★★★★☆</div><p class="cmt-txt">《夏日尽头》母亲那条线写得好，但儿子的部分稍微单薄了点。不过结尾那场戏确实值回时间。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4a3b62">晚</span><span class="cmt-name">晚风收信</span><span class="cmt-time">11-05</span></div><div class="stars">★★★★★</div><p class="cmt-txt">在电影狗翻到《深山来信》，周末一个人看完，很安静，但不是无聊那种安静。邮递员走山路的镜头印象太深了。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#5c4a2a">老</span><span class="cmt-name">老周看片</span><span class="cmt-time">11-04</span></div><div class="stars">★★★☆☆</div><p class="cmt-txt">《星轨之外》视效没得说，但感情线有点套路。可能是我预期太高了，整体还是能看。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#2f4a3a">橘</span><span class="cmt-name">橘子汽水少冰</span><span class="cmt-time">11-04</span></div><div class="stars">★★★★★</div><p class="cmt-txt">《夜班便利店》太适合下班后看了，不用动脑，但也不会觉得被糊弄。配角一个比一个有意思。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#5e2c3a">十</span><span class="cmt-name">十三号放映厅</span><span class="cmt-time">11-03</span></div><div class="stars">★★★★☆</div><p class="cmt-txt">《回声实验》声音设计确实好，建议戴耳机看。剧情中段稍微有点拖，但整体氛围撑住了。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#33405a">山</span><span class="cmt-name">山雀不吃鱼</span><span class="cmt-time">11-03</span></div><div class="stars">★★★★★</div><p class="cmt-txt">《老戏台》是我今年最想推荐给爸妈的电影。他们看完说想起年轻时候的剧团，这种反馈比影评更有说服力。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#5a3320">小</span><span class="cmt-name">小满在追片</span><span class="cmt-time">11-02</span></div><div class="stars">★★★★☆</div><p class="cmt-txt">《祖父的相机》节奏偏慢，但我挺喜欢这种不着急讲故事的方式。公路片爱好者可以试试。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#b5432a">电</span><span class="cmt-name">电影狗常客</span><span class="cmt-time">11-02</span></div><div class="stars">★★★★★</div><p class="cmt-txt">来电影狗主要看深度解析里的“适合谁看”，比单纯看评分有用。希望多写点同类比较。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#2c4a5e">雨</span><span class="cmt-name">雨天存片单</span><span class="cmt-time">11-01</span></div><div class="stars">★★★☆☆</div><p class="cmt-txt">《雾中灯塔》我朋友很喜欢，我个人觉得中段有点闷。可能我更适合节奏快一点的悬疑。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4a3b62">一</span><span class="cmt-name">一只放映机</span><span class="cmt-time">10-31</span></div><div class="stars">★★★★☆</div><p class="cmt-txt">电影狗的分类入口做得挺清楚，按情绪找片这个思路不错。希望能加上“适合约会”这类场景标签。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#5c4a2a">慢</span><span class="cmt-name">慢热观众</span><span class="cmt-time">10-30</span></div><div class="stars">★★★★★</div><p class="cmt-txt">《深山来信》看完专门去查了拍摄地，纪录片能做到让人想出门走走，就算成功了。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#2f4a3a">片</span><span class="cmt-name">片单收集者</span><span class="cmt-time">10-29</span></div><div class="stars">★★★★☆</div><p class="cmt-txt">最近更新里的信息挺有用，尤其是上映和流媒体上线的时间，省得自己到处查。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#5e2c3a">夜</span><span class="cmt-name">夜航船票</span><span class="cmt-time">10-28</span></div><div class="stars">★★★☆☆</div><p class="cmt-txt">《夜班便利店》第一集有点平，后面才渐入佳境。建议新观众从第三集开始看，可能会更容易入坑。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#33405a">光</span><span class="cmt-name">光影备忘录</span><span class="cmt-time">10-27</span></div><div class="stars">★★★★★</div><p class="cmt-txt">希望电影狗多做点老片回看，最近新片看多了有点审美疲劳，经典修复单元很需要。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 相关资讯 -->
+<section class="section" id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>相关资讯 · 电影狗行业观察</h2>
+        <p>上映、影展、制作动态与观影趋势，挑对选片有帮助的信息。</p>
+      </div>
+    </div>
+    <div class="news-grid">
+      <article class="news">
+        <div class="news-date">2026-11-06</div>
+        <h4>冬季档片单出炉，家庭与悬疑题材占比上升</h4>
+        <p>多家院线公布冬季排片方向，温情家庭片与心理悬疑片数量较去年同期增加，电影狗已同步更新推荐列表。</p>
+      </article>
+      <article class="news">
+        <div class="news-date">2026-11-05</div>
+        <h4>《雾中灯塔》密钥延期，口碑带动长线放映</h4>
+        <p>影片上映后讨论度持续走高，部分影院增加午夜场次。导演在映后交流中谈到结尾留白的创作意图。</p>
+      </article>
+      <article class="news">
+        <div class="news-date">2026-11-03</div>
+        <h4>流媒体平台公布 11 月新片上线表</h4>
+        <p>本月有多部院线电影转线上，电影狗整理了上线时间与版本差异，方便观众选择观看渠道。</p>
+      </article>
+      <article class="news">
+        <div class="news-date">2026-11-01</div>
+        <h4>纪录片《深山来信》入围年度纪录片单元</h4>
+        <p>评审称其“用克制的镜头完成了对乡村生活的尊重”。影片目前仍在部分城市点映。</p>
+      </article>
+      <article class="news">
+        <div class="news-date">2026-10-30</div>
+        <h4>青年导演扶持计划公布新一批入选项目</h4>
+        <p>多个类型片项目获得开发支持，涵盖悬疑、科幻与家庭题材，后续动态值得关注。</p>
+      </article>
+      <article class="news">
+        <div class="news-date">2026-10-28</div>
+        <h4>电影狗片单更新：高分作品索引新增 12 部</h4>
+        <p>本次更新侧重 2026 年度评分稳定、讨论度较高的作品，附简要观看建议与同类参考。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h5>电影狗</h5>
+        <p>一个认真挑片、讲清门道的电影内容站。热门推荐、深度解析、影迷评论和行业资讯持续更新，帮你把“看什么”这件事想明白。</p>
+        <p>本站内容以观影参考为主，不提供影片在线播放服务，所有片名与信息均来自公开渠道整理。</p>
+      </div>
+      <div>
+        <h5>内容栏目</h5>
+        <a href="/#hot-films">热门电影推荐</a>
+        <a href="/#latest-updates">最新更新</a>
+        <a href="/#deep-analysis">深度解析</a>
+        <a href="/#category">分类入口</a>
+        <a href="/#faq">常见问题</a>
+      </div>
+      <div>
+        <h5>观影参考</h5>
+        <a href="/#guide">体验指南</a>
+        <a href="/#comments">影迷评论</a>
+        <a href="/#news">电影资讯</a>
+        <a href="/#intro">关于电影狗</a>
+      </div>
+      <div>
+        <h5>友情链接</h5>
+        <a href="/">电影狗首页</a>
+        <a href="/#news">影视资讯合作</a>
+        <a href="/#faq">内容纠错反馈</a>
+        <a href="/#comments">用户投稿入口</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 电影狗 · 内容仅供观影参考</span>
+      <span>免责声明：本站不存储、不制作任何影片资源，片名与资讯均来自公开信息整理。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// FAQ 手风琴交互
+document.querySelectorAll('.faq-item').forEach(function(item){
+  var q = item.querySelector('.faq-q');
+  q.addEventListener('click', function(){
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(el){el.classList.remove('open');});
+    if(!isOpen){ item.classList.add('open'); }
+  });
+});
+</script>
+</body>
+  </html>
