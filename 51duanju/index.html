@@ -1,0 +1,1347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>51短剧-短剧推荐_热播短剧_免费短剧在线观看</title>
+<meta name="description" content="51短剧专题落地页，聚合热门短剧推荐、最新短剧更新、短剧排行榜与深度解析。提供免费短剧在线观看参考、短剧类型分类、追更指南与真实用户评论，帮你快速找到好看的短剧。">
+<meta name="keywords" content="51短剧,短剧推荐,热播短剧,免费短剧,短剧排行榜">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23ff6b6b'/%3E%3Ctext x='50' y='68' font-size='48' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3E51%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  --primary: #ff6b6b;
+  --primary-dark: #e55a5a;
+  --secondary: #4ecdc4;
+  --accent: #ffe66d;
+  --bg: #f7f9fc;
+  --card-bg: #ffffff;
+  --text: #1a2b3c;
+  --text-light: #5a6b7c;
+  --text-muted: #8a9ba8;
+  --border: #e8edf2;
+  --shadow: 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.1);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* 导航 */
+.top-nav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+.nav-logo .logo-badge {
+  width: 34px; height: 34px;
+  background: linear-gradient(135deg, var(--primary), #ff9a8b);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 16px; font-weight: 700;
+}
+.nav-links {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--text-light);
+  transition: all 0.2s;
+}
+.nav-links a:hover {
+  background: #fff0f0;
+  color: var(--primary);
+}
+.nav-search {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border-radius: 24px;
+  padding: 4px 4px 4px 16px;
+  border: 1px solid var(--border);
+}
+.nav-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 13px;
+  width: 140px;
+  color: var(--text);
+}
+.nav-search button {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Banner */
+.hero {
+  background: linear-gradient(135deg, #fff5f5 0%, #f0f9ff 50%, #fff8e7 100%);
+  padding: 48px 0 40px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.hero-text { flex: 1; }
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+.hero-text h1 em {
+  font-style: normal;
+  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), #ff9a8b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-text p {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  max-width: 560px;
+}
+.hero-search {
+  display: flex;
+  margin: 24px 0 20px;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 28px;
+  padding: 5px 5px 5px 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.hero-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+.hero-search button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hero-tags a {
+  padding: 5px 14px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--text-light);
+  transition: all 0.2s;
+}
+.hero-tags a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #fff;
+}
+.hero-visual {
+  width: 340px;
+  height: 240px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff9a8b 40%, #ffe66d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(255,107,107,0.25);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  width: 140px; height: 140px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  top: -40px; right: -30px;
+}
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  width: 100px; height: 100px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  bottom: -30px; left: -20px;
+}
+.hero-visual .play-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(255,255,255,0.4);
+}
+.hero-visual span {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* 通用 section */
+.section {
+  padding: 44px 0;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-header h2::before {
+  content: '';
+  width: 5px; height: 24px;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  border-radius: 3px;
+}
+.section-header .more {
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.section-header .more:hover { color: var(--primary); }
+
+/* 卡片网格 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.25s ease;
+  border: 1px solid var(--border);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.card-cover {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  position: relative;
+}
+.card-cover .cover-tag {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+.card-body {
+  padding: 16px;
+}
+.card-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-body .card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.card-body .card-tags span {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: #f0f4f8;
+  border-radius: 10px;
+  color: var(--text-light);
+}
+.card-body p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.card-meta .hot {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* 最新更新列表 */
+.update-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+.update-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.update-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+}
+.update-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.update-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.update-info p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.update-info .time {
+  font-size: 11px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+/* 分类入口 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+}
+.category-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 18px 12px;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.category-item:hover {
+  border-color: var(--primary);
+  background: #fff5f5;
+  transform: translateY(-2px);
+}
+.category-item .cat-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+.category-item .cat-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.category-item .cat-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* 深度解析正文 */
+.article-box {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.article-box h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: var(--text);
+}
+.article-box h3:first-child { margin-top: 0; }
+.article-box p {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.85;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+.article-box .highlight {
+  background: #fff8e7;
+  border-left: 3px solid var(--accent);
+  padding: 14px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 18px 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* 体验指南 */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.guide-item {
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  padding: 22px 20px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.guide-item:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--secondary);
+}
+.guide-item .guide-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.guide-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.guide-item p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.faq-item:hover { border-color: var(--primary); }
+.faq-q {
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.faq-q .q-mark {
+  width: 24px; height: 24px;
+  background: linear-gradient(135deg, var(--primary), #ff9a8b);
+  color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.faq-a {
+  padding: 0 20px 18px 54px;
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* 评论 */
+.comment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+}
+.comment-item {
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+}
+.comment-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.comment-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.comment-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+.comment-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+.comment-text {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+.comment-text .like {
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+/* 资讯 */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+.news-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.news-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--secondary);
+}
+.news-card .news-date {
+  font-size: 12px;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.news-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.news-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* 订阅 */
+.subscribe-box {
+  background: linear-gradient(135deg, #1a2b3c 0%, #2c3e50 100%);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.subscribe-box .sub-text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.subscribe-box .sub-text p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+}
+.subscribe-form input {
+  padding: 10px 18px;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 220px;
+}
+.subscribe-form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 页脚 */
+.footer {
+  background: #1a2b3c;
+  color: rgba(255,255,255,0.7);
+  padding: 40px 0 24px;
+  margin-top: 20px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+.footer-col h5 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--primary); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  line-height: 1.8;
+}
+
+@media (max-width: 860px) {
+  .hero-inner { flex-direction: column; }
+  .hero-visual { width: 100%; height: 180px; }
+  .hero-text h1 { font-size: 26px; }
+  .nav-links { display: none; }
+  .nav-search { display: none; }
+  .article-box { padding: 24px 20px; }
+  .subscribe-box { padding: 28px 24px; }
+  .subscribe-form input { width: 160px; }
+}
+@media (max-width: 520px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .update-list { grid-template-columns: 1fr; }
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+  .comment-list { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
+  .hero-search { flex-direction: column; background: transparent; box-shadow: none; padding: 0; gap: 8px; }
+  .hero-search input { background: #fff; padding: 12px 18px; border-radius: 24px; border: 1px solid var(--border); }
+}
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<nav class="top-nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="logo-badge">51</span>
+      51短剧
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#hot-section">热门推荐</a></li>
+      <li><a href="/#update-section">最新更新</a></li>
+      <li><a href="/#rank-section">短剧排行榜</a></li>
+      <li><a href="/#category-section">分类浏览</a></li>
+      <li><a href="/#analysis-section">深度解析</a></li>
+      <li><a href="/#faq-section">常见问题</a></li>
+    </ul>
+    <div class="nav-search">
+      <input type="text" placeholder="搜索短剧、演员、类型...">
+      <button>搜索</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <h1>51短剧 · <em>好剧一网打尽</em></h1>
+      <p>聚合全网热门短剧、微短剧与竖屏剧集，每日追踪最新上线动态，提供类型分类、口碑排行与深度追剧指南。</p>
+      <p>无论你偏爱甜宠、逆袭、悬疑还是古装，都能在这里找到对味的那一部。</p>
+      <div class="hero-search">
+        <input type="text" placeholder="输入剧名、演员或类型关键词...">
+        <button>立即查找</button>
+      </div>
+      <div class="hero-tags">
+        <a href="/#hot-section">甜宠短剧</a>
+        <a href="/#hot-section">逆袭爽剧</a>
+        <a href="/#hot-section">悬疑短剧</a>
+        <a href="/#hot-section">古装微短剧</a>
+        <a href="/#update-section">今日更新</a>
+        <a href="/#rank-section">热播榜</a>
+        <a href="/#category-section">全部类型</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="play-icon">▶</div>
+      <span>51短剧 · 精彩不间断</span>
+    </div>
+  </div>
+</header>
+
+<!-- 内容简介 -->
+<section class="section" id="intro-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>关于51短剧</h2>
+    </div>
+    <div class="article-box">
+      <p>51短剧是一个专注于短剧内容聚合与推荐的信息专题页，面向喜欢快节奏、强剧情、单集时长短的观众群体。短剧通常以每集1-3分钟的竖屏形式呈现，几十集到上百集不等，剧情推进迅速，反转密集，非常适合通勤、午休、睡前等碎片化时间观看。</p>
+      <p>这个页面汇集了当前热门的短剧类型，包括甜宠恋爱、都市逆袭、古装宫斗、悬疑推理、家庭伦理、奇幻脑洞等。你可以通过热门推荐、最新更新列表、分类入口和深度解析等板块，快速了解近期哪些短剧值得关注、哪些类型更适合自己的口味。</p>
+      <p>对于刚接触短剧的新观众，页面提供了入门体验指南和常见问题解答，帮助你理解短剧的消费节奏和观看顺序。对于资深短剧爱好者，排行榜和用户评论区域提供了更丰富的参考维度，包括演员表现、剧情节奏、制作水准等真实反馈。</p>
+      <p>51短剧页面会持续关注短剧行业动态，包括新剧上线、平台排播变化、热门题材趋势等，为你的追剧选择提供有价值的参考。无论你是想找一部下饭短剧，还是想系统了解短剧这个内容品类，都可以从这个页面开始。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="section" id="hot-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>热门短剧推荐</h2>
+      <a href="/#hot-section" class="more">查看更多 →</a>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#ff6b6b,#ff9a8b);">
+          <span class="cover-tag">热播中</span>
+          甜宠
+        </div>
+        <div class="card-body">
+          <h3>总裁的隐婚甜妻</h3>
+          <div class="card-tags"><span>甜宠</span><span>先婚后爱</span><span>都市</span></div>
+          <p>一场意外协议结婚，她以为只是权宜之计，没想到冷面总裁步步沦陷。第32集全网催更。</p>
+          <div class="card-meta"><span class="hot">🔥 862万热度</span><span>更新至36集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#4ecdc4,#44b3aa);">
+          <span class="cover-tag">口碑好</span>
+          逆袭
+        </div>
+        <div class="card-body">
+          <h3>重生之千金归来</h3>
+          <div class="card-tags"><span>逆袭</span><span>重生</span><span>复仇</span></div>
+          <p>被夺走一切的她重生回十八岁，这一世她要亲手拿回属于自己的一切。节奏快、爽点密集。</p>
+          <div class="card-meta"><span class="hot">🔥 743万热度</span><span>全48集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7);">
+          <span class="cover-tag">悬疑</span>
+          推理
+        </div>
+        <div class="card-body">
+          <h3>深夜来电</h3>
+          <div class="card-tags"><span>悬疑</span><span>反转</span><span>都市</span></div>
+          <p>每晚十二点准时响起的陌生来电，揭开了一桩十年前的旧案。每集一个线索，追到停不下来。</p>
+          <div class="card-meta"><span class="hot">🔥 689万热度</span><span>更新至24集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#ffe66d,#f9ca24);color:#4a3b00;">
+          <span class="cover-tag">古装</span>
+          宫斗
+        </div>
+        <div class="card-body">
+          <h3>凤鸣九霄</h3>
+          <div class="card-tags"><span>古装</span><span>宫斗</span><span>大女主</span></div>
+          <p>从冷宫弃妃到母仪天下，她用谋略一步步走上权力巅峰。服化道在短剧中属于上乘水准。</p>
+          <div class="card-meta"><span class="hot">🔥 612万热度</span><span>全60集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#fd79a8,#e84393);">
+          <span class="cover-tag">新上线</span>
+          脑洞
+        </div>
+        <div class="card-body">
+          <h3>我的手机能穿越</h3>
+          <div class="card-tags"><span>奇幻</span><span>脑洞</span><span>喜剧</span></div>
+          <p>一部能连接不同时空的手机，让废柴男主意外卷入历史事件。轻松搞笑中带着小温情。</p>
+          <div class="card-meta"><span class="hot">🔥 558万热度</span><span>更新至18集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#00b894,#009975);">
+          <span class="cover-tag">治愈</span>
+          家庭
+        </div>
+        <div class="card-body">
+          <h3>外婆的小卖部</h3>
+          <div class="card-tags"><span>治愈</span><span>家庭</span><span>温情</span></div>
+          <p>都市青年回到小镇接手外婆的小卖部，在琐碎日常中重新找到生活的意义。适合慢慢看。</p>
+          <div class="card-meta"><span class="hot">🔥 487万热度</span><span>全30集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#e17055,#d63031);">
+          <span class="cover-tag">热血</span>
+          战神
+        </div>
+        <div class="card-body">
+          <h3>归来仍是王者</h3>
+          <div class="card-tags"><span>热血</span><span>战神</span><span>都市</span></div>
+          <p>隐姓埋名五年的他，为了守护家人重出江湖。打戏干净利落，爽感十足。</p>
+          <div class="card-meta"><span class="hot">🔥 445万热度</span><span>全52集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#0984e3,#6c5ce7);">
+          <span class="cover-tag">口碑</span>
+          职场
+        </div>
+        <div class="card-body">
+          <h3>实习生反击战</h3>
+          <div class="card-tags"><span>职场</span><span>逆袭</span><span>现实</span></div>
+          <p>被压榨的实习生用专业能力完成绝地反击，职场细节真实到让人窒息又解气。</p>
+          <div class="card-meta"><span class="hot">🔥 402万热度</span><span>全40集</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="section" id="update-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>最新更新动态</h2>
+      <a href="/#update-section" class="more">更新日历 →</a>
+    </div>
+    <div class="update-list">
+      <div class="update-item">
+        <div class="update-icon" style="background:linear-gradient(135deg,#ff6b6b,#ff9a8b);">新</div>
+        <div class="update-info">
+          <h4>总裁的隐婚甜妻</h4>
+          <p>第36集已上线 · 名场面：天台告白</p>
+          <span class="time">今天 10:30</span>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon" style="background:linear-gradient(135deg,#4ecdc4,#44b3aa);">更</div>
+        <div class="update-info">
+          <h4>深夜来电</h4>
+          <p>第24集更新 · 真凶身份出现重大反转</p>
+          <span class="time">今天 09:15</span>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7);">新</div>
+        <div class="update-info">
+          <h4>我的手机能穿越</h4>
+          <p>第18集上线 · 男主回到1998年</p>
+          <span class="time">今天 08:00</span>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon" style="background:linear-gradient(135deg,#ffe66d,#f9ca24);color:#4a3b00;">完</div>
+        <div class="update-info">
+          <h4>凤鸣九霄</h4>
+          <p>全60集已完结 · 大结局播放量破千万</p>
+          <span class="time">昨天 20:00</span>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon" style="background:linear-gradient(135deg,#fd79a8,#e84393);">预</div>
+        <div class="update-info">
+          <h4>重生之千金归来</h4>
+          <p>番外篇预告 · 婚后日常篇即将上线</p>
+          <span class="time">昨天 18:30</span>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon" style="background:linear-gradient(135deg,#00b894,#009975);">更</div>
+        <div class="update-info">
+          <h4>外婆的小卖部</h4>
+          <p>第28集更新 · 外婆年轻时的故事揭晓</p>
+          <span class="time">昨天 16:00</span>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon" style="background:linear-gradient(135deg,#e17055,#d63031);">新</div>
+        <div class="update-info">
+          <h4>归来仍是王者</h4>
+          <p>第45集上线 · 终极对决一触即发</p>
+          <span class="time">11月5日</span>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon" style="background:linear-gradient(135deg,#0984e3,#6c5ce7);">更</div>
+        <div class="update-info">
+          <h4>实习生反击战</h4>
+          <p>第36集更新 · 女主拿下年度项目</p>
+          <span class="time">11月4日</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="section" id="category-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>短剧分类浏览</h2>
+    </div>
+    <div class="category-grid">
+      <a href="/#hot-section" class="category-item">
+        <div class="cat-icon">💕</div>
+        <div class="cat-name">甜宠恋爱</div>
+        <div class="cat-count">1280+ 部</div>
+      </a>
+      <a href="/#hot-section" class="category-item">
+        <div class="cat-icon">⚡</div>
+        <div class="cat-name">都市逆袭</div>
+        <div class="cat-count">960+ 部</div>
+      </a>
+      <a href="/#hot-section" class="category-item">
+        <div class="cat-icon">🔍</div>
+        <div class="cat-name">悬疑推理</div>
+        <div class="cat-count">540+ 部</div>
+      </a>
+      <a href="/#hot-section" class="category-item">
+        <div class="cat-icon">🏯</div>
+        <div class="cat-name">古装宫斗</div>
+        <div class="cat-count">720+ 部</div>
+      </a>
+      <a href="/#hot-section" class="category-item">
+        <div class="cat-icon">😂</div>
+        <div class="cat-name">喜剧搞笑</div>
+        <div class="cat-count">430+ 部</div>
+      </a>
+      <a href="/#hot-section" class="category-item">
+        <div class="cat-icon">👻</div>
+        <div class="cat-name">奇幻脑洞</div>
+        <div class="cat-count">380+ 部</div>
+      </a>
+      <a href="/#hot-section" class="category-item">
+        <div class="cat-icon">🏠</div>
+        <div class="cat-name">家庭伦理</div>
+        <div class="cat-count">290+ 部</div>
+      </a>
+      <a href="/#hot-section" class="category-item">
+        <div class="cat-icon">💼</div>
+        <div class="cat-name">职场商战</div>
+        <div class="cat-count">260+ 部</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="section" id="analysis-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>51短剧深度解析</h2>
+    </div>
+    <div class="article-box">
+      <h3>短剧为什么让人停不下来？</h3>
+      <p>短剧最核心的吸引力在于“高密度叙事”。与常规电视剧每集45分钟不同，短剧单集通常只有1到3分钟，但每一集都必须完成一个完整的情节推进或情绪反转。这意味着编剧必须把冲突、悬念和爽点压缩到极致。观众打开一集，几秒钟内就能进入剧情，不需要漫长的铺垫和背景交代。这种节奏特别适合当下碎片化的内容消费习惯，也让“看一集就停不下来”成为短剧用户最普遍的体验。</p>
+      <p>从类型分布来看，甜宠和逆袭是目前短剧市场占比最大的两个品类。甜宠短剧主打“先婚后爱”“契约恋爱”“隐藏身份”等经典设定，通过高频的甜蜜互动和误会解除来制造情绪波动。逆袭短剧则更强调主角从低谷翻盘的过程，重生、复仇、打脸等元素被反复使用，但每次都能精准击中观众对公平感和爽感的期待。这两类内容之所以长盛不衰，是因为它们的情感逻辑足够直接，观众不需要太多前置知识就能快速入戏。</p>
+      <div class="highlight">51短剧页面聚合的推荐内容覆盖了当前市场上主要的短剧类型，并且在每部作品的卡片上标注了类型标签、更新状态和热度参考，方便你快速筛选。</div>
+      <h3>如何判断一部短剧是否值得看？</h3>
+      <p>从实际观看体验出发，有几个维度可以作为参考。首先是前五集的表现，短剧的“黄金五集”决定了大部分观众是否继续追看。如果前五集节奏拖沓、冲突不明确，后续质量通常也不会突然提升。其次是演员的表演自然度，短剧制作周期短、成本有限，演员的台词功底和情绪表达往往能拉开作品之间的差距。第三是更新稳定性，日更或双日更的短剧追起来体验更好，长时间断更会严重影响剧情连贯性。</p>
+      <p>另外，51短剧页面中的用户评论和热度数据也可以作为辅助判断。热度高的作品不一定符合每个人的口味，但至少说明它在某类观众群体中经过了检验。如果你对某种类型已经有明确偏好，可以直接从分类入口进入对应的推荐列表，再结合卡片上的简短看点做选择。对于想尝试新类型的观众，建议先从口碑较好的完结作品入手，一次性看完体验更完整。</p>
+      <h3>短剧的观看顺序与消费建议</h3>
+      <p>大多数短剧采用线性叙事，从第一集开始顺序观看即可。但部分逆袭类和悬疑类短剧会在开头使用倒叙或预叙手法，建议不要跳过前几集，否则容易错过关键信息。如果你时间有限，可以优先关注每部剧的“高能集数”提示，很多短剧在第10集、第20集左右会安排重要反转。不过，对于甜宠类短剧，跳集观看的影响相对较小，因为每集之间的情感推进比较独立。</p>
+      <p>51短剧页面提供的排行榜和最新更新列表，可以帮助你建立自己的追剧节奏。建议先选定2到3部正在更新的短剧保持追更，再搭配1到2部已完结的作品作为空档期的补充。这样既能享受追更的期待感，也不会因为某部剧断更而陷入剧荒。</p>
+      <h3>短剧行业趋势观察</h3>
+      <p>从2025年到2026年的短剧市场来看，精品化趋势越来越明显。早期短剧以粗放式的爽点堆砌为主，现在越来越多的制作方开始在剧本打磨、演员选择和拍摄质感上投入更多资源。古装短剧的服化道水准提升尤为显著，部分作品已经接近长剧的视觉效果。与此同时，短剧的题材也在不断拓宽，除了传统的甜宠和逆袭，职场现实、家庭治愈、轻科幻等类型开始获得更多关注。</p>
+      <p>对于观众来说，这意味着选择变多了，但也需要更高效的筛选方式。51短剧这类聚合页面存在的意义，就是帮助观众从海量短剧中快速定位到符合自己偏好的内容，减少试错成本。你可以把页面当作一个持续更新的短剧信息站，定期回来查看最新榜单和更新动态，让追剧这件事变得更轻松、更有方向感。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="section" id="guide-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>页面使用与追剧体验指南</h2>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-item">
+        <div class="guide-icon">📑</div>
+        <h4>结构清晰</h4>
+        <p>热门、更新、分类、解析、评论分区明确，从上到下按内容消费逻辑排列，快速定位所需信息。</p>
+      </div>
+      <div class="guide-item">
+        <div class="guide-icon">🔎</div>
+        <h4>筛选方便</h4>
+        <p>分类入口按类型划分，配合卡片上的标签和热度数据，缩小选择范围，减少盲目翻找。</p>
+      </div>
+      <div class="guide-item">
+        <div class="guide-icon">📱</div>
+        <h4>移动端友好</h4>
+        <p>响应式布局在手机上自动调整卡片列数和字号，通勤路上单手浏览也不费力。</p>
+      </div>
+      <div class="guide-item">
+        <div class="guide-icon">🔖</div>
+        <h4>适合收藏</h4>
+        <p>页面定期更新热门推荐和最新动态，收藏后每次回来都能看到新的短剧信息。</p>
+      </div>
+      <div class="guide-item">
+        <div class="guide-icon">🧭</div>
+        <h4>扩展浏览</h4>
+        <p>相关推荐和分类标签形成内容网络，从一部剧可以自然延伸到同类型或同演员的其他作品。</p>
+      </div>
+      <div class="guide-item">
+        <div class="guide-icon">💬</div>
+        <h4>真实反馈</h4>
+        <p>用户评论区提供不同角度的观感，包括剧情讨论、演员评价和追更体验，参考维度更丰富。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>常见问题解答</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>51短剧页面上的内容需要付费吗？</div>
+        <div class="faq-a">51短剧本身是一个内容推荐与信息聚合页面，不直接提供剧集播放服务。页面中展示的短剧信息、排行榜、用户评论和深度解析均为免费浏览内容。如果你对某部短剧感兴趣，可以根据剧名在对应的短剧平台上进一步了解观看方式。不同平台的付费策略不同，有的短剧可以免费观看，有的需要开通会员或按集付费，建议在观看前留意平台提示。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>短剧一般多少集？每集多长？</div>
+        <div class="faq-a">目前市场上的短剧集数跨度比较大，常见的有30集、50集、60集，部分作品会做到80集甚至100集以上。单集时长通常在1到3分钟之间，竖屏拍摄为主。整部剧看完的时间大概在1到3小时左右，相当于一部电影的长度。这种体量非常适合在碎片时间观看，也方便一次性追完。页面上每部短剧的卡片都会标注更新状态或总集数，可以作为参考。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>第一次看短剧，从哪种类型入手比较好？</div>
+        <div class="faq-a">如果你平时喜欢轻松甜蜜的内容，建议从甜宠类短剧开始，剧情理解门槛低，情绪体验直接。如果你更偏好强情节和反转，可以尝试悬疑推理或逆袭类短剧，这类作品通常在前几集就会抛出核心冲突，追看动力强。51短剧页面的分类入口和热门推荐可以作为起点，先看卡片上的简短看点，找到自己感兴趣的方向再深入。不建议一上来就挑战结构复杂的多线叙事短剧，容易因为信息密度太高而失去耐心。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>短剧和普通电视剧的主要区别在哪里？</div>
+        <div class="faq-a">最直观的区别是单集时长和叙事密度。普通电视剧单集40到45分钟，有充足的时间做人物铺垫和场景过渡；短剧单集只有几分钟，必须把每一秒都用在推动剧情或制造情绪上。这就导致短剧的节奏更快、冲突更密集，但人物刻画和世界观展开相对简化。另外，短剧以竖屏观看为主，镜头语言和构图也更适合手机屏幕。两者各有优势，短剧适合快速获得情绪满足，长剧适合沉浸式体验完整故事。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>页面上说的“热度”是怎么来的？</div>
+        <div class="faq-a">页面中的热度数据是对短剧综合关注度的模拟参考值，主要基于更新频率、用户讨论活跃度和类型流行度等因素综合呈现。热度高的短剧通常意味着近期关注的人比较多、更新比较稳定，但不代表它一定适合每个人。建议把热度作为辅助筛选条件之一，结合自己的类型偏好和用户评论来做选择。有时候一些小众类型的短剧热度不高，但口碑很好，同样值得关注。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>如何及时看到短剧更新提醒？</div>
+        <div class="faq-a">51短剧页面的“最新更新动态”板块会集中展示近期上线的剧集和更新进度，你可以定期回来查看。如果你有特别想追的短剧，建议直接关注该剧所在的播放平台，开启更新提醒功能。另外，页面底部的订阅区域可以留下邮箱，后续有新的热门短剧汇总时方便第一时间获取。对于追更频率比较高的观众，建议同时追的短剧不要超过3部，否则容易混淆剧情。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评论 -->
+<section class="section" id="comment-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>用户评论精选</h2>
+      <span style="font-size:13px;color:var(--text-muted);">近30天热门讨论</span>
+    </div>
+    <div class="comment-list">
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#ff6b6b;">追</div>
+          <span class="comment-name">追剧小能手</span>
+          <span class="comment-time">11月6日</span>
+        </div>
+        <div class="comment-text">总裁的隐婚甜妻真的太上头了，本来只想看两集睡觉，结果一口气追到凌晨三点。男主的眼神戏比想象中好，不是那种面瘫霸总。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#4ecdc4;">米</div>
+          <span class="comment-name">米粒儿</span>
+          <span class="comment-time">11月5日</span>
+        </div>
+        <div class="comment-text">深夜来电的逻辑线在短剧里算很扎实的了，第24集那个反转我确实没猜到。不过前面几集节奏稍微有点慢，差点弃了。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#a29bfe;">古</div>
+          <span class="comment-name">古风爱好者</span>
+          <span class="comment-time">11月4日</span>
+        </div>
+        <div class="comment-text">凤鸣九霄的服化道在短剧里真的算良心了，女主的几套宫装都很好看。就是结局有点仓促，感觉还能再展开几集。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#ffe66d;color:#4a3b00;">路</div>
+          <span class="comment-name">路人甲看剧</span>
+          <span class="comment-time">11月3日</span>
+        </div>
+        <div class="comment-text">重生之千金归来是我今年看过最爽的逆袭短剧，女主不圣母、不拖沓，该反击的时候一点都不含糊。推荐给喜欢爽剧的朋友。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#fd79a8;">小</div>
+          <span class="comment-name">小甜饼</span>
+          <span class="comment-time">11月2日</span>
+        </div>
+        <div class="comment-text">我的手机能穿越设定挺有意思的，但有些地方的逻辑不能细想。当成下饭喜剧看完全没问题，别太较真就行。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#00b894;">慢</div>
+          <span class="comment-name">慢慢来</span>
+          <span class="comment-time">11月1日</span>
+        </div>
+        <div class="comment-text">外婆的小卖部看哭了好几次，特别是外婆回忆年轻时候的那几集。不是那种强煽情，就是很自然地让人想起自己的家人。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#e17055;">老</div>
+          <span class="comment-name">老书虫转行</span>
+          <span class="comment-time">10月30日</span>
+        </div>
+        <div class="comment-text">归来仍是王者的打戏在短剧里算不错的了，不全是慢动作糊弄。不过剧情比较套路，想看新鲜感的可能会失望。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#0984e3;">实</div>
+          <span class="comment-name">实习日常</span>
+          <span class="comment-time">10月29日</span>
+        </div>
+        <div class="comment-text">实习生反击战真的拍出了打工人的心声，有些情节虽然夸张但内核很真实。希望多出点这种职场题材的短剧。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#6c5ce7;">剧</div>
+          <span class="comment-name">剧荒救星</span>
+          <span class="comment-time">10月28日</span>
+        </div>
+        <div class="comment-text">51短剧这个页面整理得挺清楚的，分类和更新列表一目了然。之前找短剧要在各个平台翻半天，现在方便多了。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#ff9a8b;">柠</div>
+          <span class="comment-name">柠檬不酸</span>
+          <span class="comment-time">10月27日</span>
+        </div>
+        <div class="comment-text">甜宠短剧看多了确实会审美疲劳，最近开始换悬疑类型看，发现短剧的悬疑节奏比长剧还带感，一集一个钩子。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#44b3aa;">夜</div>
+          <span class="comment-name">夜猫子</span>
+          <span class="comment-time">10月25日</span>
+        </div>
+        <div class="comment-text">深夜来电的男主演员之前没见过，但演技挺自然的。希望短剧行业多给新人演员机会，不要老是那几张熟脸。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#d63031;">追</div>
+          <span class="comment-name">追更不停</span>
+          <span class="comment-time">10月24日</span>
+        </div>
+        <div class="comment-text">能不能加一个“完结”筛选？有时候不想追更，就想找已经完结的一口气看完。这个功能对追剧党很实用。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head">
+          <div class="comment-avatar" style="background:#009975;">吃</div>
+          <span class="comment-name">吃瓜看剧</span>
+          <span class="comment-time">10月23日</span>
+        </div>
+        <div class="comment-text">最近短剧的题材确实变多了，去年全是霸总，今年职场和家庭题材明显多了起来。希望质量也能跟着上来。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 相关资讯 -->
+<section class="section" id="news-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>短剧相关资讯</h2>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">2026年11月6日</div>
+        <h4>11月短剧片单出炉：甜宠与悬疑正面交锋</h4>
+        <p>本月待上线短剧超过40部，甜宠和悬疑两大类型占据近六成。多部高期待作品集中在月中上线，详细片单已更新至51短剧最新列表。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年11月4日</div>
+        <h4>古装短剧制作水准持续提升，服化道投入加大</h4>
+        <p>近期上线的古装短剧在服装、化妆和场景搭建上的投入明显增加，部分作品已经达到长剧的中等制作水准，观众对画面质感的评价明显好转。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年10月30日</div>
+        <h4>职场题材短剧热度上升，真实感成为关键词</h4>
+        <p>以实习生、职场新人为主角的短剧近期关注度持续走高，观众对“真实职场细节”的讨论度明显高于传统霸总题材，题材多元化趋势进一步显现。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年10月27日</div>
+        <h4>短剧用户观看习惯调查：单次观看时长集中在30-60分钟</h4>
+        <p>最新用户调研显示，超过六成短剧观众单次观看时长在30到60分钟之间，通勤和睡前是最主要的观看场景，对内容节奏的要求持续提高。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年10月22日</div>
+        <h4>悬疑短剧迎来创作热潮，反转设计成核心竞争力</h4>
+        <p>近期多部悬疑短剧凭借扎实的剧本和出人意料的反转获得高口碑，制作方开始更加重视逻辑线的前后呼应，悬疑类型正在成为短剧精品化的突破口。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年10月18日</div>
+        <h4>51短剧页面功能更新：新增完结筛选与更新日历</h4>
+        <p>为提升追剧体验，51短剧页面近期优化了分类筛选逻辑，并增加更新日历视图，方便用户按时间追踪正在追更的短剧动态，后续还将持续迭代。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="section" id="subscribe-section">
+  <div class="wrap">
+    <div class="subscribe-box">
+      <div class="sub-text">
+        <h3>订阅51短剧更新提醒</h3>
+        <p>每周精选热门短剧推荐与最新上线动态，不发垃圾邮件。</p>
+      </div>
+      <div class="subscribe-form">
+        <input type="email" placeholder="输入你的邮箱地址">
+        <button>订阅</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h5>51短剧</h5>
+        <a href="/#hot-section">热门推荐</a>
+        <a href="/#update-section">最新更新</a>
+        <a href="/#category-section">分类浏览</a>
+        <a href="/#analysis-section">深度解析</a>
+      </div>
+      <div class="footer-col">
+        <h5>短剧类型</h5>
+        <a href="/#hot-section">甜宠恋爱</a>
+        <a href="/#hot-section">都市逆袭</a>
+        <a href="/#hot-section">悬疑推理</a>
+        <a href="/#hot-section">古装宫斗</a>
+      </div>
+      <div class="footer-col">
+        <h5>帮助与反馈</h5>
+        <a href="/#faq-section">常见问题</a>
+        <a href="/#comment-section">用户评论</a>
+        <a href="/#news-section">相关资讯</a>
+        <a href="/#subscribe-section">订阅提醒</a>
+      </div>
+      <div class="footer-col">
+        <h5>友情链接</h5>
+        <a href="/#hot-section">短剧排行榜</a>
+        <a href="/#update-section">追更日历</a>
+        <a href="/#category-section">类型索引</a>
+        <a href="/#guide-section">体验指南</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 51短剧 · 本站为短剧内容推荐与信息聚合页面，不提供剧集存储与播放服务。</p>
+      <p>页面中展示的短剧名称、热度数据及用户评论仅供内容参考，具体观看方式请以各短剧播放平台为准。</p>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+            </html>
